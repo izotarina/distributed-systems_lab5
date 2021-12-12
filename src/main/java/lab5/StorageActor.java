@@ -18,7 +18,7 @@ public class StorageActor extends AbstractActor {
                     store.put(key, m.getResult());
                 })
                 .match(GetTestResult.class, req -> {
-                    Pair<String, Integer> key = new Pair<>(m.getUrl(), m.getRequestCount());
+                    Pair<String, Integer> key = new Pair<>(req.getUrl(), req.getRequestCount());
                     sender().tell(new StoreMessage(req.getKey(), store.get(req.getKey())), self())
                 }
                 ).build();
