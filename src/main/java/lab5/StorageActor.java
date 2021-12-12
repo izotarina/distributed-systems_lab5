@@ -1,4 +1,6 @@
 package lab5;
 
-public class StorageActor {
+import akka.actor.AbstractActor;
+
+public class StorageActor extends AbstractActor {
 }
