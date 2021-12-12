@@ -18,4 +18,8 @@ public class StoreTestResult {
     public int getRequestCount() {
         return requestCount;
     }
+
+    public String getResult() {
+        return result;
+    }
 }
