@@ -14,4 +14,8 @@ public class StoreTestResult {
     public String getUrl() {
         return url;
     }
+
+    public int getRequestCount() {
+        return requestCount;
+    }
 }
