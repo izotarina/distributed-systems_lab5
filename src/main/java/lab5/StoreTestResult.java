@@ -10,4 +10,8 @@ public class StoreTestResult {
         this.requestCount = requestCount;
         this.result = result;
     }
+
+    public String getUrl() {
+        return url;
+    }
 }
