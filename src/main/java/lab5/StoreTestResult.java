@@ -7,6 +7,7 @@ public class StoreTestResult {
 
     public StoreTestResult(String url, int requestCount, String result) {
         this.url = url;
-        this.requestCount
+        this.requestCount = requestCount;
+        this.result = result;
     }
 }
