@@ -9,4 +9,12 @@ public class GetTestResult {
         this.url = url;
         this.requestCount = requestCount;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public int getRequestCount() {
+        return requestCount;
+    }
 }
