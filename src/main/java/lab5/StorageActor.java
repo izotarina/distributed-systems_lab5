@@ -14,6 +14,7 @@ public class StorageActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreTestResult.class, m -> {
+                    Pair<String, Integer> key = new Pair<>(m.getUrl(), m.getRequestCount());
                     store.put(m.getKey(), m.getValue());
                     System.out.println("receive message! "+m.toString());
                 })
