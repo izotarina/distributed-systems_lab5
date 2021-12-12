@@ -6,6 +6,7 @@ public class GetTestResult {
 
 
     public GetTestResult(String url, int requestCount) {
-        
+        this.url = url;
+        this.requestCount = requestCount;
     }
 }
