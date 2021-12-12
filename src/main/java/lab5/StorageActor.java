@@ -15,10 +15,9 @@ public class StorageActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(StoreTestResult.class, m -> {
                     Pair<String, Integer> key = new Pair<>(m.getUrl(), m.getRequestCount());
-                    store.put(m.getKey(), m.getValue());
-                    System.out.println("receive message! "+m.toString());
+                    store.put(key, m.getResult());
                 })
-                .match(GetMessage.class, req -> sender().tell(
+                .match(GetTestResult.class, req -> sender().tell(
                         new StoreMessage(req.getKey(), store.get(req.getKey())), self())
                 ).build();
     }
