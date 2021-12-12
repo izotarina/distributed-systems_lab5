@@ -34,5 +34,7 @@ public class StressTestingApp {
                 .thenAccept(unbound -> system.terminate()); // and shutdown when done
     }
 
-    public static Flow
+    public static Flow<HttpRequest, HttpResponse, NotUsed> createFlow() {
+        
+    }
 }
